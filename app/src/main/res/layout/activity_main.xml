@@ -44,7 +44,8 @@
             android:id="@+id/btnGraficoLineal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Richard Ruales" />
+            android:onClick="graficoLineal"
+            android:text="Gráfico Lineal" />
 
         <Button
             android:id="@+id/btnMenuBotonFlotante"
