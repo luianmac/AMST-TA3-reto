@@ -16,6 +16,7 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnGraficoLineal;
+    private FloatingActionMenu actionMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this, calendario_view.class);
         startActivity(intent);
     }
-
+    public void mostrarMenu(View view){
+        actionMenu.open(true);
+        
+    }
     public void creacion_fab(){
         ImageView icon = new ImageView(this); // Create an icon
         icon.setImageDrawable( getResources().getDrawable(R.drawable.button_action ));
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
+        actionMenu = new FloatingActionMenu.Builder(this)
                 .addSubActionView(button1)
                 .addSubActionView(button2)
                 .addSubActionView(button3)
