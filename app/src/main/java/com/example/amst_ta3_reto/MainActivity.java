@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
@@ -44,8 +45,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void mostrarMenu(View view){
-        actionMenu.open(true);
-        
+        if(!actionMenu.isOpen()){
+            actionMenu.open(true);
+            Toast toast=Toast.makeText(getApplicationContext(),"Por si no lo notaste :0",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else{
+            actionMenu.close(true);
+            Toast toast=Toast.makeText(getApplicationContext(),"Magia!!!",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
     }
     public void creacion_fab(){
         ImageView icon = new ImageView(this); // Create an icon
@@ -79,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("button1 pressed");
+                Intent intent= new Intent(view.getContext(), calendario_view.class);
+                startActivity(intent);
             }
         });
 
@@ -86,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("button2 pressed");
+                Intent intent= new Intent(view.getContext(), VideoYoutube.class);
+                startActivity(intent);
             }
         });
 
@@ -93,13 +107,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("button3 pressed");
+                Intent intent= new Intent(view.getContext(), MapsActivity.class);
+                startActivity(intent);
             }
         });
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("button4 pressed");
+                Intent intent= new Intent(view.getContext(), grafico_lineal.class);
+                startActivity(intent);
             }
         });
 
