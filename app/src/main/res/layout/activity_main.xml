@@ -33,6 +33,7 @@
             android:id="@+id/btnCalendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="IrACalenario"
             android:text="Viviana Mero" />
 
         <Button
