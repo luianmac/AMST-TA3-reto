@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
+            android:onClick="IrAVideo"
             android:text="Luis Macas Lopez" />
 
         <Button
@@ -44,7 +45,8 @@
             android:id="@+id/btnGraficoLineal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Richard Ruales" />
+            android:onClick="graficoLineal"
+            android:text="Gráfico Lineal" />
 
         <Button
             android:id="@+id/btnMenuBotonFlotante"
