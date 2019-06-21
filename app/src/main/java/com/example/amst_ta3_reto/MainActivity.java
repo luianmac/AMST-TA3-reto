@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this, VideoYoutube.class);
         startActivity(intent);
     }
+    public void IrAMapa(View view){
+        Intent intent= new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
 
     public void creacion_fab(){
         ImageView icon = new ImageView(this); // Create an icon
